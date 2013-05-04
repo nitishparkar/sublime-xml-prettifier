@@ -1,10 +1,7 @@
 Sublime XML Prettifier
 =============
 
-A plugin to make my daily job a bit easy.
-It uses ~~python's xml.dom.minidom~~ [XmlFormatter](https://pypi.python.org/pypi/XmlFormatter/) to prettify selected xml.
-Select the xml and press ctrl + shift + f to prettify it.
-(I have added Key Bindings for Linux)
+A plugin to make my daily job a bit easy. It uses [XmlFormatter](https://pypi.python.org/pypi/XmlFormatter/) to prettify selected xml. Select the xml and press ctrl + shift + f to prettify it (I have added Key Bindings for Linux). You can also select xml, right click and choose "Prettify XML" from the context menu.
 
 
 You may have to follow the following steps to make the plugin work
