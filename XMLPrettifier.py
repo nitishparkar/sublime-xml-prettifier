@@ -1,11 +1,9 @@
-import re
-import xml.dom.minidom
 import sublime, sublime_plugin
+from TestXmlFormatter import Formatter
 
 class PrettifyCommand(sublime_plugin.TextCommand):
   def prettify(self, text):
-    pxml = xml.dom.minidom.parseString(text).toprettyxml()
-    return pxml
+    return Formatter().format_string(text)
 
   def run(self, edit):
     sels = self.view.sel()
