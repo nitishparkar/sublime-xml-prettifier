@@ -1,9 +1,10 @@
 import sublime, sublime_plugin
-from TestXmlFormatter import Formatter
+from xml.dom import minidom
 
 class PrettifyCommand(sublime_plugin.TextCommand):
   def prettify(self, text):
-    return Formatter().format_string(text)
+    parsed_string = minidom.parseString(text)
+    return parsed_string.toprettyxml(indent="  ")
 
   def run(self, edit):
     sels = self.view.sel()
